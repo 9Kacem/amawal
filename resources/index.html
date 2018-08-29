@@ -26,18 +26,45 @@
       </nav>
     </header>
 
+    <div class="container">
+      <center><h3>Lorem ipsum dolor sit amet</h3><br></center>
+      <div class="row">
+        <!-- ---------------- recherche par mot ------------------- -->
+        <div class="col-md-7 card bg-warning text-white">
+          <div class="card-body">
+            <h4 class="card-title">Fait un recherche par mot!</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!--
+            <form class="" action="index.html" method="post">
 
+            </form>
+            -->
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+        <!-- ---------------- recherche par Alphabet ------------------- -->
+        <div class="col-md-4 card bg-info text-white">
+          <div class="card-body">
+            <h4 class="card-title">Fait un recherche par l'Alphabet!</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <div id="Alphabet-Div">
+              <!-- Alphabet will be generated here by show-alphabet.js -->
+            </div>
+          </div>
+        </div>
+      </div> <!-- ----------------   End of Row    ------------------- -->
+    </div> <!-- ----------------   End of Container    ------------------- -->
 
-
-    <footer class="footer" style="text-align:center">
+    <footer class="footer text-center">
       <div class="container">
        <p>Copyright (c) 2018 All Rights Reserved.<br>Contact info:
          <a href="k.boussekar@esi-sba.dz">&nbspK.boussekar@esi-sba.dz</a>.
        </p>
       </div>
-   </footer>
+    </footer>
 </body>
-
+<!-- ----------------   JS scripts (put on tail to load page faster)  ------------------- -->
+<script src="scripts/show-alphabet"></script>
 <script src="js/jquery-3.1.0.min"></script>
 <script src="js/bootstrap.min.js"></script>
 </html>
