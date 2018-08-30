@@ -1,5 +1,5 @@
-for (i = 65; i < 99; i++) {
-  var tmpVal =   $("#div1").text();
-  var str =String.fromCharCode(i);
-  $("#div1").text(tmpVal+" "+str);
+for (i = 65; i < 91; i++) {
+  var tmpVal =   $("#Alphabet-Div").html();
+  var newLetter = String.fromCharCode(i);
+  $("#Alphabet-Div").append("<a href=\"" + newLetter + "\">"+newLetter+"</a>");
 }

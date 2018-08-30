@@ -19,3 +19,11 @@ body {
 .bg-black {
   background-color: #000000;
 }
+#Alphabet-Div {
+    text-align:justify;
+    text-justify:auto;
+}
+
+#Alphabet-Div > a {
+  margin-right: 33px;
+}

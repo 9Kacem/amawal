@@ -25,45 +25,50 @@
     </header>
 
     <div class="container">
-      <br><h3></h3><br>
-      <div class="row">
+      <div class="row" style="padding: 60px; height: 400px">
         <!-- ---------------- recherche par mot ------------------- -->
-        <div class="col-md-7 card bg-warning text-white">
+        <div class="col-md-7 card bg-light text-dark">
           <div class="card-body">
             <h4 class="card-title">Fait un recherche par mot!</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <!--
-            <form class="" action="index.html" method="post">
+            <p class="card-text">Entrez un mot Tamazight (latin) et trouvez la definition en Français!</p><br>
 
+            <form class="" action="#" method="post">
+              <div class="input-group mb-3 input-group-lg">
+                <input name="theWord" type="text" class="form-control" placeholder="eg: 'Argaz'">
+                <div class="input-group-append">
+                  <button class="btn btn-success fa fa-search" type="submit"></button>
+                </div>
+              </div>
             </form>
-            -->
+
           </div>
         </div>
         <div class="col-md-1"></div>
         <!-- ---------------- recherche par Alphabet ------------------- -->
-        <div class="col-md-4 card bg-info text-white">
+        <div class="col-md-4 card bg-light text-dark">
           <div class="card-body">
-            <h4 class="card-title">Fait un recherche par l'Alphabet!</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <h4 class="card-title">Fait un recherche par Alphabet!</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet</p>
             <div id="Alphabet-Div">
-              <script src="js/show-alphabet"></script>
-              <!-- Alphabet will be generated here by show-alphabet.js -->
+              <!-- TODO: Create pages for each letter -->
             </div>
           </div>
         </div>
       </div> <!-- ----------------   End of Row    ------------------- -->
     </div> <!-- ----------------   End of Container    ------------------- -->
 
-    <footer class="footer bg-black text-white text-center">
+    <footer class="footer bg-black text-center" style="color: #dddddd">
       <div class="container">
-       <p>Copyright (c) 2018 All Rights Reserved.<br>Contact info:
-         <a href="k.boussekar@esi-sba.dz">&nbspK.boussekar@esi-sba.dz</a>.
+       <p>Git repo: <a href="https://github.com/9Kacem/amawal">https://github.com/9Kacem/amawal</a>
+        <br>Contact info:<a href="k.boussekar@esi-sba.dz">&nbspK.boussekar@esi-sba.dz</a>.
        </p>
       </div>
     </footer>
 </body>
 
 <!-- ----------------   JS scripts (put on tail to load page faster)  ------------------- -->
-<script src="js/jquery-3.1.0.min"></script>
+<script src="js/jquery-3.1.0.min.js"></script>
 <script src="css/bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/show-alphabet.js"></script>
+
 </html>
