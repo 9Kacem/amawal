@@ -1,0 +1,36 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  background-image: url("../images/weavingCarpets.jpg");
+  background-repeat: repeat-x;
+  background-position: right;
+  background-color: black;
+  background-size: contain;
+}
+.navbar {
+  background-color: black;
+}
+.myFooter {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  background-color: #000000;
+  color: #dddddd;
+}
+#Alphabet-Div {
+    text-align:justify;
+    text-justify:auto;
+}
+
+#Alphabet-Div > a {
+  margin-right: 33px;
+}
