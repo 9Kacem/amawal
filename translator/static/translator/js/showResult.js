@@ -1,10 +1,18 @@
 $(document).ready(function(){
   $("#searchButton").click(function(){
-    var myString = $("#inputField").val();
-    $.get("/?s="+myString);
-  });
-});
+    var inputValue = $("#inputValue").val();
 
-function fetchWord(data, status){
-    alert("Data: " + data + "\nStatus: " + status);
-}
+    $.ajax({
+      url: '/translate/',
+      data: {
+        s: inputValue
+      },
+      dataType: 'json',
+      success: function (data) {
+          alert(data.inArabic);
+      }
+    });
+
+  });
+
+});
