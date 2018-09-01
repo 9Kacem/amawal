@@ -33,15 +33,16 @@
           <div class="card bg-light text-dark">
           <div class="card-header"><h4 class="card-text">Fait un recherche par mot</h4></div>
           <div class="card-body">
-            <form class="" action="#" method="post">
-              <label class="card-text">Entrez un mot Tamazight (latin) et trouvez la definition en Français!</label>
-              <div class="input-group mb-3 input-group-lg">
-                <input name="theWord" type="text" class="form-control" placeholder="eg: 'Argaz'">
-                <div class="input-group-append">
-                  <button class="btn btn-success fa fa-search" type="submit"></button>
-                </div>
+            <label class="card-text">Entrez un mot Tamazight (latin) et trouvez la definition en Français!</label>
+            <div class="input-group mb-3 input-group-lg">
+              <input id="inputField" type="text" class="form-control" placeholder="eg: 'Argaz'">
+              <div class="input-group-append">
+                <button id="searchButton" class="btn btn-success fa fa-search"></button>
               </div>
-            </form>
+            </div>
+            <div id="resultContainer">
+              <!-- TODO: Make front-end -->
+            </div>
           </div>
           </div>
         </div>
@@ -72,6 +73,7 @@
 <!-- ----------------   JS scripts (put on tail to load page faster)  ------------------- -->
 <script src={% static "translator/js/jquery-3.1.0.min.js" %}></script>
 <script src={% static "translator/css/bootstrap-4.1.3-dist/js/bootstrap.min.js" %}></script>
-<script src={% static "translator/js/show-alphabet.js" %}></script>
+<script src={% static "translator/js/showAlphabet.js" %}></script>
+<script src={% static "translator/js/showResult.js" %}></script>
 
 </html>
