@@ -1,18 +1,21 @@
 $(document).ready(function(){
-  $("#searchButton").click(function(){
-    var inputValue = $("#inputValue").val();
+  $("#searchForm").submit(function(e){
+    var form = $(this);
 
     $.ajax({
-      url: '/translate/',
-      data: {
-        s: inputValue
-      },
+      type: "GET",
+      url: form.attr('action'),
+      data: form.serialize(),
       dataType: 'json',
-      success: function (data) {
-          alert(data.inArabic);
+      success: function (response) {
+          alert(response.inArabic);
       }
     });
+
+    e.preventDefault(); // stops the default submit button
 
   });
 
 });
+
+// TODO: change alert to good front-end
