@@ -7,30 +7,25 @@ from django.http import JsonResponse
 from .models import Word
 
 def index(request):
-    return render_to_response('translator/index.html')
+    return render_to_response('translator/base.html')
 
 def translate(request):
 
-    inTamazight = request.GET.get('awal', None); # Returns None if 'awal' not found
+    inTamazight = request.GET.get('mot', None); # Returns None if 'awal' not found
 
-    if inTamazight: # Checks if the input field has a value
-        try: # Make query for the arabic synonyme
+    if inTamazight: # Checks if the input field #mot has a value
+        try: # do query for the synonyms
             inArabic = Word.objects.get(word_tamazight=inTamazight).word_arabic
-            # TODO: query for french synonyme too
+            inFrench = Word.objects.get(word_tamazight=inTamazight).word_french
 
             data = {
-                'inArabic': inArabic
-                # TODO: 'inFrench' : inFrench
+                'inArabic': inArabic,
+                'inFrench' : inFrench
             }
 
-            return JsonResponse(data)
+            return JsonResponse(data);
         except Word.DoesNotExist:
+            return JsonResponse({});
 
-            data = {
-                'inArabic': "Word does not exist"
-            }
-
-            return JsonResponse(data)
-            
     else:
-        return render_to_response('translator/index.html')
+        return HttpResponse()

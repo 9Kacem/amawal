@@ -26,6 +26,19 @@ body {
   background-color: #000000;
   color: #dddddd;
 }
+#resultsContainer{
+  height: 100px;
+}
+
+#resultsContainer > ul{
+  display: none;
+}
+
+#resultsContainer > ul > li{
+  font-weight: bold;
+  background-color: #f8f9fa;
+}
+
 #Alphabet-Div {
     text-align:justify;
     text-justify:auto;
